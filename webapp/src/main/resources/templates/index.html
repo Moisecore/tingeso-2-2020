@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora WebApp</title>
+</head>
+<body align="center">
+    <div>
+        <h1>Calculadora WebApp</h1>
+    </div>
+    <form th:action="@{/}" method="post" th:object="${calc}">
+        <div>
+            <label>Número 1:</label>
+            <input type="number" th:field="*{num1}" value="0" required>
+        </div>
+        <div>
+            <label>Número 2:</label>
+            <input type="number" th:field="*{num2}" value="0" required>
+        </div>
+        <div>
+            <label>Operación:</label>
+            <input type="text" th:field="*{oper}" id="operacion" readonly="readonly" hidden="hidden">
+            <button name="suma" onclick="operar('+')">+</button>
+            <button name="resta" onclick="operar('-')">-</button>
+            <button name="multip" onclick="operar('*')">*</button>
+            <button name="division" onclick="operar('/')">/</button>
+            <script>
+                function operar(op) {
+                    document.getElementById("operacion").value = op;
+                }
+            </script>
+        </div>
+    </form>
+</body>
+</html>
