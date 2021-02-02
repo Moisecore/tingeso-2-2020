@@ -48,7 +48,7 @@ pipeline {
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: 'k8s_svc_deploy.yaml',
+                    configs: 'k8s_deploy.yaml',
                     enableConfigSubstitution: true
                 )
             }

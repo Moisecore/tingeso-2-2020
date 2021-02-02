@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp-service-deployment
+spec:
+  type: NodePort
+  selector:
+    app: webapp-service
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 31000
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-service-deployment
+  labels:
+    app: webapp-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp-service
+  template:
+    metadata:
+      labels:
+        app: webapp-service
+    spec:
+      containers:
+      - name: webapp-service
+        image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
+        ports:
+        - containerPort: 8080
