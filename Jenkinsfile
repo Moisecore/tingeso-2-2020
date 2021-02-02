@@ -15,7 +15,6 @@ pipeline {
 		steps {
 			echo 'Testing the application...'
 			sh './webapp/gradlew tasks'
-			sh 'chmod +x ./webapp/gradlew'
 			sh './webapp/gradlew test'
 		}
 
