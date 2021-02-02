@@ -9,7 +9,7 @@ public class CalcTest {
     public void getNum1Test(){
         Calc calc = new Calc(1,2,"+","3");
         double num1 = calc.getNum1();
-        assertEquals(11, num1,0);
+        assertEquals(1, num1,0);
     }
 
     @Test
