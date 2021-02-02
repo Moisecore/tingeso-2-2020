@@ -8,7 +8,7 @@ pipeline {
              steps {	
                 echo 'Running build automation...'
                 sh 'chmod +x ./webapp/gradlew'
-                sh 'sudo -S moisecore ./webapp/gradlew build'
+                sh './webapp/gradlew build'
             }
         }
 	stage('Test') {
