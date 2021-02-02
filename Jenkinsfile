@@ -9,14 +9,14 @@ pipeline {
                 echo 'Running build automation...'
                 sh 'chmod +x ./webapp/gradlew'
                 sh './webapp/gradlew build'
-		sh 'ls'
+		sh 'cd webapp/build/libs | ls'
             }
         }
 	stage('Test') {
 		steps {
 			echo 'Testing the application...'
 			sh './webapp/gradlew test -p ./webapp'
-			sh 'ls'
+			sh 'cd webapp/build/libs | ls'
 		}
 
 		post {
