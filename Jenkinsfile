@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def app
     environment {
         DOCKER_IMAGE_NAME = "moisecore/tingeso-2-2020"
     }
