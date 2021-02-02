@@ -4,7 +4,7 @@ pipeline {
         DOCKER_IMAGE_NAME = "moisecore/tingeso-2-2020"
     }
     stages {
-        stage('Build') {	
+        stage('Build') {
              steps {	
                 echo 'Running build automation...'
                 sh 'chmod +x ./webapp/gradlew'
