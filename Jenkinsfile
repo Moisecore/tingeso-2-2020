@@ -14,8 +14,8 @@ pipeline {
 	stage('Test') {
 		steps {
 			echo 'Testing the application...'
-			sh './webapp/gradlew tasks'
-			sh './webapp/gradlew test --scan'
+			sh './webapp/src/gradlew tasks'
+			sh './webapp/src/gradlew test'
 		}
 
 		post {
