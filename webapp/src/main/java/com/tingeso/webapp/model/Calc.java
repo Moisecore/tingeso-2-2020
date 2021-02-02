@@ -7,6 +7,13 @@ public class Calc {
     private String oper;
     private String res;
 
+    public Calc(double num1, double num2, String oper, String res) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.oper = oper;
+        this.res = res;
+    }
+
     public double getNum1() {
         return num1;
     }

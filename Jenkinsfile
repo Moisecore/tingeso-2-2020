@@ -14,7 +14,15 @@ pipeline {
 	stage('Test') {
 		steps {
 			echo 'Testing the application...'
+			sh './webapp/gradlew test'
 		}
+
+		post {
+			always {
+				junit '**/webapp/build/test-results/test/TEST-*.xml'
+			}
+		}
+
 	}
         stage('Build Docker Image') {
             when {

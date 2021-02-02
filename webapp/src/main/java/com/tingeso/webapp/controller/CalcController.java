@@ -10,7 +10,7 @@ public class CalcController {
 
     @GetMapping("/")
     public String index(Model model){
-        Calc calc = new Calc();
+        Calc calc = new Calc(0,0,"","");
         model.addAttribute("calc", calc);
         return "index";
     }
