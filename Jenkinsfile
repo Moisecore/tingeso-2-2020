@@ -28,6 +28,7 @@ pipeline {
             steps {
 		sh 'ls'
 		sh 'cd webapp'
+		sh 'ls'
 		script {
                     app = docker.build(DOCKER_IMAGE_NAME)
 		}
