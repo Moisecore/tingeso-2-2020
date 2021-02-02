@@ -7,7 +7,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Copy or project directory (locally) in the current directory of our docker image (/app)
-COPY build/libs/*.jar /app/
+COPY webapp/build/libs/*.jar /app/
 
 # Expose $PORT on container.
 # We use a variable here as the port is something that can differ on the environment.
