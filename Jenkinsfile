@@ -8,14 +8,14 @@ pipeline {
              steps {	
                 echo 'Running build automation'
                 sh 'chmod +x ./webapp/gradlew'	
-                sh './webapp/gradlew build --no-daemon'
+                sh './webapp/gradlew build'
             }
         }
 	stage('Test') {
 		steps {
 			echo 'Testing the application...'
-			sh 'chmod +x ./webapp/gradlew'
-			sh './webapp/gradlew test --no-daemon'
+			sh './webapp/gradlew tasks'
+			sh './webapp/gradlew test --stacktrace'
 		}
 
 		post {
