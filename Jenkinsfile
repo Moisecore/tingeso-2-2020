@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {	
              steps {	
                 echo 'Running build automation'
-                sh 'gradle build --no-daemon'	
+                sh './gradlew clean build'
             }
         }
 	stage('Test') {
