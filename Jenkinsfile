@@ -7,7 +7,8 @@ pipeline {
         stage('Build') {	
              steps {	
                 echo 'Running build automation'	
-                sh 'gradlew build --no-daemon'
+                sh 'chmod +x ./gradlew'
+                sh './gradlew build --no-daemon'	
             }	
         }
 	stage('Test') {
