@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {	
              steps {	
-                echo 'Running build automation'
+                echo 'Running build automation...'
                 sh 'chmod +x ./webapp/gradlew'	
                 sh './webapp/gradlew build'
             }
