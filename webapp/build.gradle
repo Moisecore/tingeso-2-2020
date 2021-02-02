@@ -20,7 +20,7 @@ dependencies {
 }
 
 test {
-	project.logger.lifecycle('my message visible by default')
+	project.logger.lifecycle('Inician pruebas...')
 	useJUnitPlatform()
 }
 
