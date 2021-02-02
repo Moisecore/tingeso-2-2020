@@ -1,0 +1,6 @@
+com/tingeso/webapp/model/Calc.java
+ com.tingeso.webapp.model.Calc
+com/tingeso/webapp/WebappApplication.java
+ com.tingeso.webapp.WebappApplication
+com/tingeso/webapp/controller/CalcController.java
+ com.tingeso.webapp.controller.CalcController

@@ -1,0 +1,6 @@
+com/tingeso/webapp/controller/CalcControllerTest.java
+ com.tingeso.webapp.controller.CalcControllerTest
+com/tingeso/webapp/model/CalcTest.java
+ com.tingeso.webapp.model.CalcTest
+com/tingeso/webapp/WebappApplicationTests.java
+ com.tingeso.webapp.WebappApplicationTests
