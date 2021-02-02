@@ -26,9 +26,6 @@ pipeline {
 	}
         stage('Build Docker Image') {
             steps {
-		echo "$USER"
-		sh 'sudo groupadd docker'
-		sh 'sudo usermod -aG docker $USER'
 		script {
                     app = docker.build(DOCKER_IMAGE_NAME)
 		}
